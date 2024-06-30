@@ -1,0 +1,11 @@
+Introdução:
+Em grupo discutimos qual eixo iríamos seguir, alguns participantes da equipe colocaram suas ideias de quais guinchos queriam pôr em prática, 
+e então por votação decidimos seguir a ideia de um site de compras, 
+logo após fizemos a escolha a partir de um perfil no Instagram de uma pequena empresa que produzem a bebida alcoólica Gin com efusão, 
+o qual o nome é “GinTrão”. Durante uma reunião feita pelo Discord, foi feito um rascunho de como seguiríamos com o projeto. 
+
+Design e usabilidade: 
+Foi divido em grupo a quantidade de telas para cada participante, fizemos as telas pelo programa Figma,
+utilizamos como base para se inspirar as imagens disponíveis no Instagram da empresa além de outros aplicativos como iFood.
+O layout do site é moderno e atraente, buscando mostrar para público-alvo a sofisticação que essa bebida deliciosa trás.
+A navegação é intuitiva, com menus claros e bem-organizados.
