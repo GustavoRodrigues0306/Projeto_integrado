@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="icones_img_site/favcon.ico" type="image/x-icon">
-    <title>Gin Delivery</title>
+    <title>Home Gin Delivery</title>
+    <link rel="stylesheet" href="index.css"> <!--link pra estilização CSS-->
 </head>
 <body>
-    <div>
-        <a href="cadastro_desconto.html"> Ganhe 5% off no seu primeiro pedido, <strong>PROMO</strong><strong>GIN5</strong></a>
+<!--cadastro de desconto 5%-->
+    <div class="promo-container">
+        <a href="cadastro_desconto.html"> Ganhe 5% off no seu primeiro pedido, <strong>PROMO</strong><strong>GIN5</strong></a> 
     </div>
-    <div>
+<!--menu superior direito: checkout, resumo pedidos-->
+    <div class="top-menu">
         <a href="checkout.html(pagina de confirmação pedido)">
             <img src="icones_img_site/cesta_pedido.png" alt="icone_cesta_compra"></a>
         <a href="resumo_de_pedidos">
             <img src="icones_img_site/Forward Button.png  " alt="exibe_resumo_pedidos"></a>
     </div>
+    <!--caixa de seleção de endereço-->
+    <div class="container-location">
+        <p>Receber agora em:</p>
+        <div class=location-box><ul><input type="text" id="endereco" name="endereco" placeholder="Insira seu endereço com número"></ul></div>
+    </div> 
+    <!--login/signup button-->
+    <a href="login-signup.html" class="login-signup">Login/Signup</a> <!--inserir página do formulário -->
+    <!--acesso redes sociais-->
     <nav class="redes">
         <ul>
             <li>
@@ -30,10 +41,15 @@
             </li>
         </ul>
     </nav>
-    <p>Receber agora em:<nav class="localizacao"><ul>
-        <input type="text" id="endereco" name="endereco" placeholder="Insira seu endereço com número"></ul> 
+    <h3>Aberto até as 19h</h3>
     <div id="banner"><img src="icones_img_site/gin_tonica_gintrão450.jpg" alt="banner_tacas_gin"></div>
-    <div id="banner_avaliacao"><img src="icones_img_site/avaliacao.png" alt="numero_de_reviews">
+    <div id="banner_avaliacao"><img src="icones_img_site/avaliacao.png" alt="numero_de_reviews"></div>
+    <!--seleção produto preferido-->
+    <input type="text" id="search-product-input" name="produto-preferido" placeholder="Procure o seu preferido...">
+    <!--opção 2 de busca favorita-->
+    <nav class="procure o seu gin preferido"></li>
+            <form action="#"method="get"><input id="search-product-input" type="text" name="Pesquisar" placeholder="Pesquise seu GIN favorito" autocapitalize="none" autocomplete="off" class="css-ar09cx" value=""></nav>
+<!--menu principal (horizontal)-->
     <nav class="menu Principal">
         <ul>
             <li><a href="#">Início</a></li>
@@ -41,8 +57,6 @@
             <li><a href="#">Eventos</a></li>
             <li><a href="#">Quem Faz</a></li>
             <li><a href="#">FAQ</a></li>
-            <li class="procure o seu gin preferido"></li>
-            <form action="#"method="get"><input id="search-product-input" type="text" name="Pesquisar" placeholder="Pesquise seu GIN favorito" autocapitalize="none" autocomplete="off" class="css-ar09cx" value=""></li>
         <ul>
 <h1><strong>GIN NO LITRÃO & LITRÃOzinho</strong></h1>
     <nav class="menu_1litro">
@@ -65,9 +79,35 @@
             <li><img src="icones_img_site/box_festa.png" alt="box_grande"></li>
         </ul>
     </nav>
-<h3><strong>POR DELIVERY E NOS MELHORES EVENTOS</strong></h3>   
+<h3><strong>POR DELIVERY E NOS MELHORES EVENTOS</strong></h3>
+<!--Subscrição--> 
+    <div class="subscribe-container"><h3><strong>Participe de promoções exclusivas por email</strong></h3>
+    <form>
+        <input type="email" id="email" placeholder="seuemail@mail.com" required>
+        <button type="submit" class="subscribe-container">Subscribe</button>
+    </form>
+    <h4>Não enviamos spam, leia nossa política de email</h4>
+    </div>
+    <!-- Informações legais-->
+    <nav class="Legal">
+        <ul>
+            <li><a href="#">Termos e Condições</a></li>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">Cookies</a></li>
+        </ul>
+    </nav>
+    <!--Links Importantes-->
+    <nav class="Links importantes">
+        <ul>
+            <li><a href="#">Ajuda</a></li>
+            <li><a href="#">Trabalhe conosco</a></li>
+        </ul>
+    </nav>
 </body>
 <footer>
-    <h4>Participe de promoções exclusivas por email</h4>
+    
+
+
+    <p>Olinders.LTDA Copyright 2024, All Rights Reserved.</p>
 </footer>
 </html>
