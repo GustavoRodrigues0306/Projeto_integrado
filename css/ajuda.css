@@ -1,0 +1,30 @@
+
+
+body{
+    font-size: 30px;
+    background-color: #edd92a;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+input{
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 250px;
+    height: 70px;
+
+    
+}
+
+button{
+    color: aliceblue;
+    border-radius: 20px;
+    margin: auto;
+    width: 140px;
+    height: 40px;
+    background-color: #ac2d6c;
+    cursor: pointer;
+}

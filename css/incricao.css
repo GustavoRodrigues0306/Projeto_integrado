@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body{
+    margin:  0;
+    background-color: #edd92a;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+}
+
+.entrada{
+    margin: auto;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.container {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+footer{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+button{
+    border-radius: 10px;
+    margin: auto;
+    width: 200px;
+    background-color: aquamarine;
+    padding: 5px;
+}
+
+button#apple{
+    background-color: black;
+
+}
+
+button#face{
+    background-color: blue;
+}
+
+input{
+    height: 30px;
+    border-radius: 5px;
+    margin: auto;
+    width: 300px;
+}
+
+footer button{
+    font-size: 14px;
+    color: aliceblue;
+    background-color: #ac2d6c;
+}
+
+footer a{
+    color: #ac2d6c;
+}
+
+a#email{
+    color: aliceblue;
+}

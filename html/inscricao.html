@@ -5,27 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../img/gintraoicon.ico">
+    <link rel="stylesheet" href="../css/incricao.css">
     <title>GinTrão</title>
 </head>
 <body>
    <header>
+    <div class="entrada">
      <img src="../img/gintrao_logo248kb.webp" width="200" weigth="200"  alt="">
      <p>Entrar na conta com outros serviços:</p>
-     <button> <a href="https://www.facebook.com">ENTRAR COM FACEBOOK</a></button>
+     <button id= "face"> <a href="https://www.facebook.com">ENTRAR COM FACEBOOK</a></button>
      <br>
      <br>
-     <button><a href="https://appleid.apple.com/sign-in">ENTRAR COM APPLE</a></button>
+     <button id= "apple"><a href="https://appleid.apple.com/sign-in">ENTRAR COM APPLE</a></button>
+    </div>
    </header> 
    <main>
+    <div class="container">
      <p>OU</p>
      <P>Insira seu e-mail para entrar ou se cadastrar:</P>
-     <label for="email">Email:</label>
-     <input type="email" name="email" id="email">
+     <input type="email" name="email" id="email" placeholder="E-mail" required>
+    </div>
    </main>
    <footer>
      <br>
-     <button>CONTINUAR COM E-MAIL</button>
+     <button><a href="../html/index.html" id="email"> CONTINUE COM E-MAIL</a></button>
      <p>Precisa de ajuda? Entre no <a href="./ajuda.html">Me Ajuda!</a></p>
-     </footer>
+</footer>
 </body>
 </html>
