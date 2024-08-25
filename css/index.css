@@ -1,0 +1,43 @@
+@charset "UTF-8"; 
+body{
+    background-color: white;
+}
+
+.promo-container {
+    background-color: #434343;
+    padding: 20px;
+    border-radius: 10px; /*arredondar bordas*/
+    text-align: left;
+}
+
+.promo-container a {
+    text-decoration: none;  /*remove underline do link*/
+    color: white;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.promo-container strong {
+    color: #FC8A06; /*cor destaque do PROMO GIN5 */
+}
+
+.top-menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #CB009E;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-menu a {
+    margin: 0 5px;
+}
+
+.top-menu img {
+    width: 24px;
+    height: 24px;
+}
