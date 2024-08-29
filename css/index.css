@@ -4,10 +4,13 @@ body{
 }
 
 .promo-container {
+    position: fixed;
     background-color: #434343;
-    padding: 20px;
+    padding: 21px;
+    padding-right: 900px;
     border-radius: 10px; /*arredondar bordas*/
-    text-align: left;
+    text-align: center;
+    margin-left: 100px;
 }
 
 .promo-container a {
@@ -23,23 +26,112 @@ body{
 
 .top-menu {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    right: 130px;
     background-color: #CB009E;
     padding: 10px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 0;
 }
 
 .top-menu a {
-    margin: 0 5px;
+    margin: 5 5px; 
+    line-height: normal;
 }
 
-.top-menu img {
+.top-menu img {  /*não consegui alinhar o ícone da seta */
     width: 24px;
     height: 24px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.vertical-line {
+    border-left: 1px solid white;
+    height: 40px;
+    margin: 0 20px;
+}
+.container-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 1%;
+}
+.container-location {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    margin-top: 70px;
+    margin-left: 100px;
+}
+.container-location p {
+    margin-right: 5px;
+    font-weight: 21px;
+}
+.location-box {
+    flex-grow: 0.02;
+} /*não consegui mais ajustar o tamanho da caixa*/
+.location-box ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.location-box input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #434343;
+    border-radius: 4px;
+    box-sizing: content-box;
+}
+.login-signup {
+    display: inline-block;
+    background-color: #03081F;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 70px;
+    margin-right: 260px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 0.3s ease;
+}
+.login-signup:hover {
+    background-color: #03081fd8;
+}
+.menu-principal {
+    list-style-type: none; /*pra remover o bullet point*/
+    padding: 5px;
+    margin: 0%;
+}
+.menu-principal {
+    display: inline-block;
+    justify-content: space-between;
+    background-color: #CB009E;
+    width: 100%;
+}
+
+.menu-principal li {
+    display: inline-block;
+    margin-right: 0%;
+    padding: 1%;
+    text-align: center;
+}
+
+.menu-principal a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    text-align: justify;
+    padding: 10px;
+}
+
+.menu-principal a:hover {
+    background-color: #03081F;
+    border-radius: 27px;
 }
 
 

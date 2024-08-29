@@ -4,65 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/favcon.ico" type="image/x-con">
-    <link rel="stylesheet" href="index.css"> <!--estilização css-->
+    <link rel="stylesheet" href="../css/index.css"> <!--estilização css-->
     <title>Home Gin Delivery</title>           
 </head>
 <body>
+<!--cadastro de desconto 5%-->
     <header>
-        <!--cadastro de desconto 5%-->
-            <div class="promo-container">
-                <a href="cadastro_desconto.html"> Ganhe 5% off no seu primeiro pedido, <strong>PROMO</strong><strong>GIN5</strong></a> 
-                </div>
+        <div class="promo-container">
+            <a href="cadastro_desconto.html"> Ganhe 5% off no seu primeiro pedido, <strong>PROMO</strong><strong>GIN5</strong></a> 
+        </div>
 <!--menu superior direito: checkout, resumo pedidos-->
         <div class="top-menu">
             <a href="checkout.html(pagina de confirmação pedido)">
                 <img src="../img/cesta_pedido.png" alt="icone_cesta_pedido"></a>
+                <span class="vertical-line">
             <a href="resumo_de_pedidos">
-                <img src="../img/Forward Button.png" alt="forward_button"></a> <!--exibe resumo  de pedidos-->
+            <img src="../img/Forward Button.png" alt="forward_button"></a> 
+            <!--exibe resumo  de pedidos-->
         </div>
-    </head>
+    </header>
+<!--caixa de seleção de endereço-->
     <main>
-    <!--caixa de seleção de endereço-->
-        <div class="container-location">
-            <p>Receber agora em:</p>
-            <div class=location-box><ul><input type="text" id="endereco" name="endereco" placeholder="Insira seu endereço com número"></ul></div>
-        </div> 
-        <!--login/signup button-->
-        <a href="login-signup.html" class="login-signup">Login/Signup</a> <!--inserir página do formulário -->
-        <!--acesso redes sociais-->
+        <div class="container-wrapper">
+            <div class="container-location">
+                <p>Receber agora em:</p>
+                <div class=location-box><ul><input type="text" id="endereco" name="endereco" placeholder="Insira seu endereço com número"></ul></div>
+            </div> 
+<!--login/signup button-->
+            <a href="login-signup.html" class="login-signup">Login/Signup</a> <!--inserir página do formulário -->
+<!--acesso redes sociais-->
+        </div>
         <nav class="redes">
             <ul>
                 <li>
                     <a href="https://www.instagram.com/gintrao/" target="_blank">
-                        <img src="../img/Instagram_button.png" alt="instagram">
-                    </a>
+                    <img src="../img/Instagram_button.png" alt="instagram"></a>
                 </li>
                 <li>
                     <a href="https://api.whatsapp.com/message/V6UMAKO2DAPNB1?autoload=1&app_absent=0" target="_blank">
-                        <img src="../img/whatsapp_icon.png" alt="whatsapp">
-                    </a>
+                    <img src="../img/whatsapp_icon.png" alt="whatsapp"></a>
                 </li>
             </ul>
         </nav>
         <h3>Aberto até as 19h</h3>
         <div id="banner"><img src="../img/gin_tonica_gintrão.jpg" alt="banner_tacas_gin"></div>
         <div id="banner_avaliacao"><img src="../img/avaliacao.png" alt="numero_de_reviews"></div>
-        <!--seleção produto preferido-->
-        <!-- opção 1 de seletor <input type="text" id="search-product-input" name="produto-preferido" placeholder="Procure o seu preferido...">-->
-        <!--opção 2 de busca favorita-->
+<!--seleção produto preferido-->
+<!-- opção 1 de seletor <input type="text"
+id="search-product-input" name="produto-preferido" placeholder="Procure o seu preferido...">-->
+<!--opção 2 de busca favorita-->
         <nav class="procure o seu gin preferido"></li>
-                <form action="#"method="get"><input id="search-product-input" type="text" name="Pesquisar" placeholder="Pesquise seu GIN favorito" autocapitalize="none" autocomplete="off" class="css-ar09cx" value=""></nav>
-    <!--menu principal (horizontal)-->
-        <nav class="menu Principal">
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Eventos</a></li>
-                <li><a href="#">Quem Faz</a></li>
-                <li><a href="#">FAQ</a></li>
-            <ul>
-    <!--Mix de produtos-->
-    <h1><strong>GIN NO LITRÃO & LITRÃOzinho</strong></h1>
+            <form action="#"method="get"><input id="search-product-input" type="text" name="Pesquisar" placeholder="Pesquise seu GIN favorito" autocapitalize="none" autocomplete="off" class="css-ar09cx" value="">
+        </nav>
+<!--menu principal (horizontal)-->
+        <main>
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="#"><strong>Início</strong></a></li>
+                    <li><a href="#"><strong>Ofertas</strong></a></li>
+                    <li><a href="#"><strong>Eventos</strong></a></li>
+                    <li><a href="#"><strong>Quem faz</strong></a></li>
+                    <li><a href="#"><strong>FAQ</strong></a></li>
+                <ul>
+            </nav>
+<!--Mix de produtos-->
+        <h1><strong>GIN NO LITRÃO & LITRÃOzinho</strong></h1>
         <nav class="menu_1litro"> <!--opções de 1 litro-->
             <ul>
                 <li><img src="../img/Bgin_azedinho.png" alt="gin_1l_azedinho"></li>
@@ -74,27 +80,28 @@
                 <li><img src="../img/Sgin_docinho.png" alt="gin_500ml_docinho"></li>
                 <li><img src="../img/Sgin_agridoce.png" alt="gin_500ml_agridoce"></li>
             </ul>
-<!--Opções de gin na box pequeno, médio e grande-->
-    </nav>
-    <h2><strong>GIN NA BOX</strong></h2>
-        <nav class="menu_box">
-            <ul>
-                <li><img src="../img/box_familia.png" alt="box_pequeno"></li>
-                <li><img src="../img/box_turma.png" alt="box_medio"></li>
-                <li><img src="../img/box_festa.png" alt="box_grande"></li>
-            </ul>
         </nav>
-    <h3><strong>POR DELIVERY E NOS MELHORES EVENTOS</strong></h3>
-    </main>
+<!--Opções de gin na box pequeno, médio e grande-->
+        <h2><strong>GIN NA BOX</strong></h2>
+            <nav class="menu_box">
+                <ul>
+                    <li><img src="../img/box_familia.png" alt="box_pequeno"></li>
+                    <li><img src="../img/box_turma.png" alt="box_medio"></li>
+                    <li><img src="../img/box_festa.png" alt="box_grande"></li>
+                </ul>
+            </nav>
+        <h3><strong>POR DELIVERY E NOS MELHORES EVENTOS</strong></h3>
 <!--Subscrição--> 
-    <div class="subscribe-container"><h3><strong>Participe de promoções exclusivas por email</strong></h3>
-    <form>
-        <input type="email" id="email" placeholder="seuemail@mail.com" required>
-        <button type="submit" class="subscribe-container">Subscreva</button>
-    </form>
-    <h4>Não enviamos spam, leia nossa política de email</h4>
-    </div>
-    <!-- Informações legais-->
+        <div class="subscribe-container"><h3><strong>Participe de promoções exclusivas por email</strong></h3>
+        <form>
+            <input type="email" id="email" placeholder="seuemail@mail.com" required>
+            <button type="submit" class="subscribe-container">Subscreva</button>
+        </form>
+        <h4>Não enviamos spam, leia nossa política de email</h4>
+        </div>
+    </main>
+    <footer>
+<!-- Informações legais-->
     <nav class="Legal">
         <ul>
             <li><a href="#">Termos e Condições</a></li>
@@ -102,18 +109,14 @@
             <li><a href="#">Cookies</a></li>
         </ul>
     </nav>
-    <!--Links Importantes-->
+<!--Links Importantes-->
     <nav class="Links importantes">
         <ul>
             <li><a href="#">Ajuda</a></li>
             <li><a href="#">Trabalhe conosco</a></li>
         </ul>
     </nav>
-</body>
-<footer>
-    
-
-
     <p>Olinders.LTDA Copyright 2024, All Rights Reserved.</p>
-</footer>
+    </footer>
+</body>
 </html>
