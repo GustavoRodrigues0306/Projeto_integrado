@@ -275,17 +275,54 @@ h5 {
     text-align: center;
     padding-top: 1px;
 }
-
-footer .legal ul {
-    display: flex;
+/* lista termos legais*/
+.legal ul {
     justify-content: left;
-    list-style-type: none;
     padding: 0;
-    margin: 20px;
+    margin: 0;
+}
+/*itens da lista*/
+.legal li {
+    list-style-type: none;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
 }
 
-footer .legal li {
-list-style-type: none;
-font-size: 16px;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* links da lista:estilo*/
+.legal li a {
+    text-decoration: line;
+    color: #03081F;
+    padding: 10px 30px;
+    transition: transform 0.3s;
+}
+
+.legal li a: hover; {
+    transforme:translate 3px
+}
+
+/* ajuda-trabalhe conosco*/
+.links-importantes ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.links-importantes li {
+    list-style-type: none;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+    margin-left: 80%;
+}
+
+.links-importantes li a {
+    text-decoration: line;
+    color: #03081F;
+    padding: 10px 30px;
+
+}
+/*como eu alinho o paragrafo?*/
+.copyright {
+    align-content: center;
 }
