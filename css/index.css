@@ -263,8 +263,8 @@ h4 {
 
 }
 
-.subscreva-button: hover {
-    background-color::backdrop
+.subscreva-button {
+    background-color:backdrop
 } /*gostaria de fazer o botão mexer/afundar*/
 
 h5 {
@@ -274,4 +274,18 @@ h5 {
     font-weight: bolder;
     text-align: center;
     padding-top: 1px;
+}
+
+footer .legal ul {
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+}
+
+footer .legal li {
+list-style-type: none;
+font-size: 16px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
