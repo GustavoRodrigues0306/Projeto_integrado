@@ -53,9 +53,10 @@
 <!-- opção 1 de seletor <input type="text"
 id="search-product-input" name="produto-preferido" placeholder="Procure o seu preferido...">-->
 <!--opção 2 de busca favorita-->
-        <nav class="procure o seu gin preferido"></li>
-            <form action="#"method="get"><input id="search-product-input" type="text" name="Pesquisar" placeholder="Pesquise seu GIN favorito" autocapitalize="none" autocomplete="off" class="css-ar09cx" value="">
-        </nav>
+        <nav class="procure-o-seu-gin-preferido"></nav>
+        <form action="#"method="get">  <!--inserir no action a url ou server script que faça funcionar a busca. Como???-->
+            <input id="search-product-input" type="text" name="Pesquisar" placeholder="Pesquise seu GIN favorito" autocapitalize="none" autocomplete="off" class="css-ar09cx" value="">
+        </form>
 <!--menu principal (horizontal)-->
         <main>
             <nav class="menu-principal">
@@ -67,40 +68,41 @@ id="search-product-input" name="produto-preferido" placeholder="Procure o seu pr
                     <li><a href="#"><strong>FAQ</strong></a></li>
                 <ul>
             </nav>
-<!--Mix de produtos-->
+<!--Mix de produtos. Deveria usar div ou nav aqui?-->
         <h1><strong>GIN NO LITRÃO & LITRÃOzinho</strong></h1>
-        <nav class="menu_1litro"> <!--opções de 1 litro-->
-            <ul>
+        <div class="menu_litros"> <!--opções de 1 litro-->
+            <ul class="litro-1">
                 <li><img src="../img/Bgin_azedinho.png" alt="gin_1l_azedinho"></li>
                 <li><img src="../img/Bgin_docinho.png" alt="gin_1l_docinho"></li>
                 <li><img src="../img/Bgin_agridoce.png" alt="gin_1l_agridoce"></li>
             </ul>
-            <ul> <!--opções de 500ml-->
+            <ul class="meio-litro"> <!--opções de 500ml-->
                 <li><img src="../img/Sgin_azedinho.png" alt="gin_500ml_azedinho"></li>
                 <li><img src="../img/Sgin_docinho.png" alt="gin_500ml_docinho"></li>
                 <li><img src="../img/Sgin_agridoce.png" alt="gin_500ml_agridoce"></li>
             </ul>
-        </nav>
+        </div>
 <!--Opções de gin na box pequeno, médio e grande-->
         <h2><strong>GIN NA BOX</strong></h2>
             <nav class="menu_box">
-                <ul>
+                <ul class="menu_box">
                     <li><img src="../img/box_familia.png" alt="box_pequeno"></li>
                     <li><img src="../img/box_turma.png" alt="box_medio"></li>
                     <li><img src="../img/box_festa.png" alt="box_grande"></li>
                 </ul>
             </nav>
         <h3><strong>POR DELIVERY E NOS MELHORES EVENTOS</strong></h3>
+    </main>
 <!--Subscrição--> 
-        <div class="subscribe-container"><h3><strong>Participe de promoções exclusivas por email</strong></h3>
+    <footer>
+        <h4><strong>Participe de promoções exclusivas por email</strong></h4>
+        <div class="subscreva">
         <form>
             <input type="email" id="email" placeholder="seuemail@mail.com" required>
-            <button type="submit" class="subscribe-container">Subscreva</button>
+            <button type="submit" class="subscreva-button">Subscreva</button>
         </form>
-        <h4>Não enviamos spam, leia nossa política de email</h4>
         </div>
-    </main>
-    <footer>
+        <h5>Não enviamos spam, leia nossa política de email</h5>
 <!-- Informações legais-->
     <nav class="Legal">
         <ul>

@@ -101,10 +101,28 @@ body{
 .login-signup:hover {
     background-color: #03081fd8;
 }
+.procure-o-seu-gin-preferido form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    /* como colocar pra direita?*/
+}
+
+#search-product-input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #434343;
+    border-radius: 21px;
+    width: 200px;
+    outline: #03081F;
+    font-weight: bold;
+    cursor: text;
+}
+
 .menu-principal {
     list-style-type: none; /*pra remover o bullet point*/
     padding: 5px;
-    margin: 0%;
+    margin: 35px;
 }
 .menu-principal {
     display: inline-block;
@@ -134,4 +152,126 @@ body{
     border-radius: 27px;
 }
 
+h1 {
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*substituir por poppins*/
+    font-weight: bolder;
+}
+/* Abaixo, não sei como ajustar as distâncias*/
+.menu_litros {
+    display: inline-block;
+    justify-content: space-between;
+}
 
+.litro-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+    padding: 0;
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+
+.litro-1 li img {
+    max-width: 190%;
+    height: 80%;
+}
+
+.meio-litro {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-gap: 5px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.meio-litro li image {
+    max-width: 10px;
+    height: 50%;
+}
+
+h2 { /*deveria ser h2 mesmo? É um produto secundário...*/
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*substituir por poppins*/
+    font-weight: bolder;
+}
+
+.menu_box {
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.menu_box ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+    padding: 0;
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+/* como não consegui ajustar utilizando o li img, deixar apenas com este e pedir ajuda na monitoria.*/
+
+h3 {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*substituir por poppins*/
+    font-weight: bolder;
+    text-align: center;
+}
+footer {
+    background-color: darkgray;
+}
+h4 {
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*substituir por poppins*/
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.subscreva {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.subscreva input {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 18px;
+    outline: none;
+    width: 300px;
+}
+
+.subscreva-button {
+    padding: 10px 20px;
+    background-color: yellow;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: ease-in;
+    position: relative;
+    left: -25%;
+    z-index: 1; /* pro botão ficar por cima*/
+
+}
+
+.subscreva-button: hover {
+    background-color::backdrop
+} /*gostaria de fazer o botão mexer/afundar*/
+
+h5 {
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*substituir por poppins*/
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 1px;
+}
