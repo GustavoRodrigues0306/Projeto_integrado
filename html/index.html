@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/favcon.ico" type="image/x-con">
     <link rel="stylesheet" href="../css/index.css"> <!--estilização css-->
+    <script src="../javascript/index.js" defer></script>
     <title>Home Gin Delivery</title>           
 </head>
 <body>
 <!--cadastro de desconto 5%-->
     <header>
-        <div class="promo-container">
-            <a href="cadastro_desconto.html"> Ganhe 5% off no seu primeiro pedido, <strong>PROMO</strong><strong>GIN5</strong></a> 
+        <div class="promogin">
+            <a href="#" onclick=ativarcupom()"> Ganhe 5% off no seu primeiro pedido, <strong>PROMO</strong><strong>GIN5</strong></a> 
         </div>
 <!--menu superior direito: checkout, resumo pedidos-->
         <div class="top-menu">
@@ -34,6 +35,11 @@
             <a href="login-signup.html" class="login-signup">Login/Signup</a> <!--inserir página do formulário -->
 <!--acesso redes sociais-->
         </div>
+    <section>
+        <div> <!--alinhado à esquerda-->
+            <h3>Aberto até as 19h</h3>
+            <!--inserir logo dentro dessa div-->
+        </div>
         <nav class="redes">
             <ul>
                 <li>
@@ -45,10 +51,10 @@
                     <img src="../img/whatsapp_icon.png" alt="whatsapp"></a>
                 </li>
             </ul>
+            <div id="banner"><img src="../img/gin_tonica_gintrão.jpg" width="150px" alt="banner_tacas_gin"></div>
+            <div id="banner_avaliacao"><img src="../img/avaliacao.png" width="90px" alt="numero_de_reviews"></div>
         </nav>
-        <h3>Aberto até as 19h</h3>
-        <div id="banner"><img src="../img/gin_tonica_gintrão.jpg" alt="banner_tacas_gin"></div>
-        <div id="banner_avaliacao"><img src="../img/avaliacao.png" alt="numero_de_reviews"></div>
+    </section>
 <!--seleção produto preferido-->
 <!-- opção 1 de seletor <input type="text"
 id="search-product-input" name="produto-preferido" placeholder="Procure o seu preferido...">-->
@@ -58,16 +64,15 @@ id="search-product-input" name="produto-preferido" placeholder="Procure o seu pr
             <input id="search-product-input" type="text" name="Pesquisar" placeholder="Pesquise seu GIN favorito" autocapitalize="none" autocomplete="off" class="css-ar09cx" value="">
         </form>
 <!--menu principal (horizontal)-->
-        <main>
-            <nav class="menu-principal">
-                <ul>
-                    <li><a href="#"><strong>Início</strong></a></li>
-                    <li><a href="#"><strong>Ofertas</strong></a></li>
-                    <li><a href="#"><strong>Eventos</strong></a></li>
-                    <li><a href="#"><strong>Quem faz</strong></a></li>
-                    <li><a href="#"><strong>FAQ</strong></a></li>
-                <ul>
-            </nav>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="#"><strong>Início</strong></a></li>
+                <li><a href="#"><strong>Ofertas</strong></a></li>
+                <li><a href="#"><strong>Eventos</strong></a></li>
+                <li><a href="#"><strong>Quem faz</strong></a></li>
+                <li><a href="#"><strong>FAQ</strong></a></li>
+            <ul>
+        </nav>
 <!--Mix de produtos. Deveria usar div ou nav aqui?-->
         <h1><strong>GIN NO LITRÃO & LITRÃOzinho</strong></h1>
         <div class="menu_litros"> <!--opções de 1 litro-->
