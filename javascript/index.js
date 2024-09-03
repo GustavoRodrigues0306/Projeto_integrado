@@ -6,12 +6,12 @@ function ativarcupon() {
 }
 
 //aplicação do desconto no checkout
-function aplicar-desconto-checkout(valor-total) {
-    let cupom-ativo = localStorage.getItem("cupomdesconto");
-    if (cupom-ativo === "PROMOGIN5") {
+function aplicarDescontoCheckout(valorTotal) {
+    let cupomAtivo = localStorage.getItem("cupomdesconto");
+    if (cupomAtivo === "PROMOGIN5") {
         let desconto = valorTotal * 0.05;
-        let novo-total = valorTotal - desconto; 
-        return novo-total; //valor com desconto
+        let novoTotal = valorTotal - desconto; 
+        return novoTotal; //valor com desconto
     }
     else {
         return valorTotal; //valor sem desconto
@@ -26,4 +26,52 @@ function aplicar-desconto-checkout(valor-total) {
 //console.log("Valor total com desconto:", totalComDesconto);
 
 
-//menu superior direito: checkout, resumo pedidosmenu superior direito: checkout, resumo pedidos
+//menu superior direito: resumo pedidos:
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const resumoButton = document.getElementById('resumo-pedidos');
+    const resumoContainer = document.getElementById('resumo-container');
+
+    if (resumoButton && resumoContainer) {
+        //exemplo de itens
+        const items = [
+            { nome: 'Gin Azedinho 1L', quantidade: 1},
+            { nome: 'Gin Docinho 1L', quantidade: 3}
+        ];
+
+        //lista de itens
+        let itemList = '<ul>';
+        items.forEach(item => {
+            itemList += li>${item.nome} - ${item.quantidade}</li>;
+        });
+        itemList += '</ul>'; 
+
+        //mouse passa por cima: exibe lista
+        resumoButton.addEventListener('mouseover', function() {
+            resumoContainer.innerHTML = itemList;
+            resumoContainer.style.display = 'block';
+        });
+
+        //click no botão: tbm exibe lista
+        resumoButton.addEventListener('click', function() {
+            event.preventDefault();
+            resumoContainer.innerHTML = itemList;
+            resumoContainer.style.display = 'block';
+        });
+
+        //mouse sai de cima: some a lista
+        resumoButton.addEventListener('mouseout', function() {
+            resumoContainer.style.display = 'none';
+        });
+        //click fora
+        document.addEventListener('click', function(event) {
+            if (!resumoButton.contains(event.target) && !resumoContainer.contains(event.target)) {
+                resumoContainer.style.display = 'none';
+            }
+        });
+
+    else {
+        console.error('Elementos não encontrados no DOM');
+    } 
+});

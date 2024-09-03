@@ -5,10 +5,7 @@ body{
 }
 
 .promogin {
-    position: fixed
-    top: 20px
-    left: 50px
-    transform: translateX(-50%);
+    position: fixed;
     background-color: #434343;
     padding: 15px 30px;
     border-radius: 10px; /*arredondar bordas*/
@@ -62,9 +59,9 @@ body{
 
 .top-menu {
     position: fixed;
-    right: 40px;
+    right: 22px;
     background-color: #CB009E;
-    padding: 10px;
+    padding: 12.6px;
     border-radius: 10px;
     line-height: 0;
     z-index: 1001
@@ -99,7 +96,7 @@ body{
     align-items: center;
     margin-bottom: 4px;
     margin-top: 70px;
-    margin-left: 100px;
+    margin-left: 10px;
 }
 .container-location p {
     margin-right: 5px;
@@ -107,7 +104,7 @@ body{
 }
 .location-box {
     flex-grow: 0.02;
-} /*não consegui mais ajustar o tamanho da caixa*/
+} /*não consegui mais ajustar o tamanho da caixa?????????????????*/
 .location-box ul {
     list-style-type: none;
     margin: 0;
@@ -127,7 +124,7 @@ body{
     text-decoration: none;
     padding: 10px 20px;
     margin-top: 70px;
-    margin-right: 260px;
+    margin-right: 40px;
     border-radius: 18px;
     font-size: 16px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -152,12 +149,13 @@ nav.redes {
     flex-direction: column;
     align-items: center;
 }
-
-.procure-o-seu-gin-preferido form {
-    display: flex;
+/* POR QUE não ficou aloinhado à direita e não separa do menu principal???????*/
+nav.procure-o-seu-gin-preferido {
+    display: inline-block;
     align-items: center;
     margin-bottom: 20px;
-    /* como colocar pra direita?*/
+    margin-right: 400px;
+    
 }
 
 #search-product-input {
@@ -174,7 +172,7 @@ nav.redes {
 .menu-principal {
     list-style-type: none; /*pra remover o bullet point*/
     padding: 5px;
-    margin: 35px;
+    margin: 0px;
 }
 .menu-principal {
     display: inline-block;
