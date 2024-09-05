@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         //lista de itens
         let itemList = '<ul>';
         items.forEach(item => {
-            itemList += li>${item.nome} - ${item.quantidade}</li>;
+            itemList += li>${item.nome} - ${item.quantidade}</li>
         });
         itemList += '</ul>'; 
 
@@ -72,6 +72,93 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
     else {
-        console.error('Elementos não encontrados no DOM');
+        console.error('Elementos não encontrados no DOM. Verifique seu código')
     } 
 });
+
+//section redes e carrossel
+    //elementos do carrossel e botões de navegação
+const carrossel = document.querySelector('.carrossel')
+const items = document.querySelectorAll('.carrossel-item')
+const totalItems = items.length;
+const voltarButton = document.querySelector('.voltar')
+const avancarButton = Document.querySelector('.avançar')
+let correntIndex = 0;
+
+//passagem do carrossel
+function updateCarrossel() {
+    carrossel.style.transform = `tranlateX(-${currentIndex * 100}%)`;
+    updateIndicators();
+}
+
+//avançar carrossel
+function nextItem() {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    updateCarrossel
+}
+
+//retroceder carrossel
+function prevItem() {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    updateCarrossel();
+} 
+
+//click dos botões avançar/retroceder
+avancarButton.addEventListener('click', nextItem)
+voltarButton.addEventListener('click', prevItem)
+
+//indicador para quantidade de cards no carrossel
+function createIndicators() {
+    const indicatorsContainer = document.querySelector('.indicators');
+    for (let i = 0; i < totalItems; i++) {
+        const indicator = document.createElement('div');
+        indicator.classList.add('indicator');
+        indicatorsContainer.appendChild(indicator);
+    }
+    document.querySelector('.carrossel-container').appendChild(indicatorsContainer);
+}
+
+//indicador de navegação
+function updateIndicators() {
+    const indicators = document.querySelectorAll('.indicator');
+    indicators.forEach((indicator, index)  => {
+        if (index === currentIndex) {
+            indicator.classList.add('active')
+        else {
+                indicator.classList.remove('active')
+            }
+        }
+    })
+}
+//inicia 
+createIndicators();
+
+//botão voltar ao início da pagina
+document.getElementById('voltar-inicio').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+})
+
+
+//subscrição de email
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('subscription-form');
+    const emailInput = document.getElementById('email');
+    const errorMessage = document.getElementById('error-message');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        //pra validar o email:
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailValue = emailInput.value;
+        if (emailPattern.test(emailValue)) {
+            errorMessage.style.display = 'none';
+            alert('E-mail subscrito com sucesso!');
+        else {
+            errorMessage.textContent = 'Email inválido';
+            errorMessage.style.display = 'block';
+        }
+    }
+
+})
+

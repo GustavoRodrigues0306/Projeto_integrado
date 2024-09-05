@@ -45,7 +45,7 @@
             <a href="login-signup.html" class="login-signup">Login/Signup</a> <!--inserir página do formulário -->
 <!--acesso redes sociais-->
         </div>
-    <section>
+    <section class="section-redes-e-carrossel">
         <div> <!--alinhado à esquerda-->
             <h3>Aberto até as 19h</h3>
             <!--inserir logo dentro dessa div-->
@@ -61,18 +61,33 @@
                     <img src="../img/whatsapp_icon.png" alt="whatsapp"></a>
                 </li>
             </ul>
-            <div id="banner"><img src="../img/gin_tonica_gintrão.jpg" width="150px" alt="banner_tacas_gin"></div>
-            <div id="banner_avaliacao"><img src="../img/avaliacao.png" width="90px" alt="numero_de_reviews"></div>
         </nav>
+<!--carrossel-->
+        <div class="carrossel-container">
+            <div class="carrossel">
+                <div id="banner-carrossel">
+                    <img src="../img/gin_tonica_gintrão.jpg" width="160px" alt="banner_tacas_gin">
+                </div>
+                <div id="banner-carrossel">
+                    <img src="../img/garrafas-gintrao-1l-DALL·E.png" width="160px" alt="banner_garrafas1l_gin">
+                </div>
+                <!--add outros banners carrossel aqui-->
+                <button class="voltar">⟨</button>
+                <button class="avançar">⟩</button>
+            </div>
+            <!-- banner de avaliação-->
+            <div id="banner_avaliacao">
+                <img src="../img/avaliacao.png" width="80px" alt="numero_de_reviews">
+            </div>
     </section>
 <!--seleção produto preferido-->
 <!-- opção 1 de seletor <input type="text"
 id="search-product-input" name="produto-preferido" placeholder="Procure o seu preferido...">-->
 <!--opção 2 de busca favorita-->
         <nav class="procure-o-seu-gin-preferido"></nav>
-        <form action="#"method="get">  <!--inserir no action a url ou server script que faça funcionar a busca. Como???-->
-            <input id="search-product-input" type="text" name="Pesquisar" placeholder="Pesquise seu GIN favorito" autocapitalize="none" autocomplete="off" class="css-ar09cx" value="">
-        </form>
+            <form id="busca" action="#"method="get">  <!--inserir no action a url ou server script que faça funcionar a busca. Como???-->
+                <input id="search-product-input" type="text" name="Pesquisar" placeholder="procure o seu gin favorito" autocapitalize="none" autocomplete="off" class="css-ar09cx" value="">
+            </form>
 <!--menu principal (horizontal)-->
         <nav class="menu-principal">
             <ul>
@@ -110,11 +125,15 @@ id="search-product-input" name="produto-preferido" placeholder="Procure o seu pr
     </main>
 <!--Subscrição--> 
     <footer>
+        <div class="voltar-inicio">
+            <a href="#" id="voltar-inicio">Voltar ao início</a>
+        </div>
         <h4><strong>Participe de promoções exclusivas por email</strong></h4>
         <div class="subscreva">
         <form>
             <input type="email" id="email" placeholder="seuemail@mail.com" required>
             <button type="submit" class="subscreva-button">Subscreva</button>
+            <div id="error-email" class="error-email"></div>
         </form>
         </div>
         <h5>Não enviamos spam, leia nossa política de email</h5>

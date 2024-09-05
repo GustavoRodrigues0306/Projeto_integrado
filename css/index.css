@@ -3,7 +3,6 @@
 body{
     background-color: white;
 }
-
 .promogin {
     position: fixed;
     background-color: #434343;
@@ -14,7 +13,6 @@ body{
     max-width: 800%;
     width: 90%;
 }
-
 
 .promogin a {  
     text-decoration: none;  /*remove underline do link*/
@@ -134,13 +132,150 @@ body{
     background-color: #03081fd8;
 }
 
-main section {
-    display: flex;
-    justify-content: space-evenly;
-
+/* redes e carrossel*/
+.section-redes-e-carrossel {
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 3fr; /*o carrossel ocupa mais espaço*/
+    background-color: yellow;
+    padding: 15px 30px;
+    border-radius: 10px;
+    gap: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    align-items: center;
+}
+.info {
+    grid-column: 1; /* Primeira coluna */
+    justify-self: start; /* Alinha à esquerda da coluna */
+    align-self: end; /* Alinha ao final da coluna */
 }
 
-nav.redes {
+.redes {
+    grid-column: 2; /* Segunda coluna */
+    text-align: center;
+}
+
+.redes ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.redes li {
+    margin-bottom: 10px;
+}
+
+.carrossel-container {
+    grid-column: 3; /* Terceira coluna */
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+/*LUTHHHHH !!!!!!!!!!!!!!!!!!!!!!!!*/
+/* carrossel*/
+/*
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.banner-carrossel {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carrossel-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+*/
+.button.voltar, .button.avançar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: whitesmoke;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+button.avançar {
+    left: 10px;
+}
+
+.button.voltar {
+    right: 10px;
+}
+/* não consegui reduzir e posicionar o banner avaliação*/
+
+/*responsividade*/
+@media (max-width: 768px) {
+    .carrossel-section {
+        grid-template-columns: 1fr; /* Uma única coluna para telas menores */
+        padding: 10px 20px;
+    }
+    
+    .info, .redes, .carrossel-container, .banner-avaliacao {
+        justify-self: center; /* Centraliza os elementos */
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carrossel-section {
+        background-color: transparent; /* Remove o fundo em telas pequenas */
+        padding: 0;
+        border-radius: 0;
+        grid-template-columns: 1fr; /* Uma única coluna */
+    }
+
+    .info, .redes, .banner-avaliacao {
+        display: none; /* Oculta os elementos exceto o carrossel */
+    }
+    
+    .carrossel-container {
+        width: 100%;
+        margin: 0;
+    }
+}
+/*
+@media (max-width: 768px) {
+    .section-redes-e-carrossel {
+        flex-direction: column;
+        align-items: flex-start;
+   }
+
+   .carrossel-container {
+        max-width: 100%;
+   }
+}
+*/
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+*/
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: (255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: (255, 255, 255, 1);
+}
+/*nav.redes {
     display: flex;
 
 }
@@ -148,14 +283,17 @@ nav.redes {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+main section {
+    display: flex;
+    justify-content: space-evenly;
+
+}}*/
+
 /* POR QUE não ficou aloinhado à direita e não separa do menu principal???????*/
 nav.procure-o-seu-gin-preferido {
-    display: inline-block;
+    display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    margin-right: 400px;
-    
+    margin-left: 50px;
 }
 
 #search-product-input {
@@ -167,6 +305,8 @@ nav.procure-o-seu-gin-preferido {
     outline: #03081F;
     font-weight: bold;
     cursor: text;
+    margin-bottom: 20px;
+
 }
 
 .menu-principal {
@@ -273,7 +413,34 @@ h3 {
 }
 footer {
     background-color: darkgray;
+    padding: 0px;
+    position: relative;
 }
+
+.voltar-inicio {
+    display: flexbox;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+.voltar-inicio:hover {
+    background-color: #434343 ;
+}
+
+#voltar-inicio {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+#voltar-inicio a:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Participe promoções exclusivas por email*/
 h4 {
     font-size: 18px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -282,6 +449,7 @@ h4 {
     text-align: center;
     padding-top: 70px;
 }
+/* subscrição do email */
 
 .subscreva {
     display: flex;
@@ -297,6 +465,13 @@ h4 {
     border-radius: 18px;
     outline: none;
     width: 300px;
+}
+
+.error-email {
+    color: #CB009E;
+    font-size: 0.875em;
+    margin-top: 5px;
+    display: none;
 }
 
 .subscreva-button {
@@ -317,6 +492,8 @@ h4 {
     background-color:backdrop
 } /*gostaria de fazer o botão mexer/afundar*/
 
+/*Não enviamos spam, leia nossa política de email*/
+
 h5 {
     font-size: 12px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -325,6 +502,7 @@ h5 {
     text-align: center;
     padding-top: 1px;
 }
+
 /* lista termos legais*/
 .legal ul {
     justify-content: left;
@@ -376,3 +554,4 @@ h5 {
 .copyright {
     align-content: center;
 }
+
