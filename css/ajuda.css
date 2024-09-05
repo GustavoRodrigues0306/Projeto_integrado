@@ -1,23 +1,51 @@
 
 
+
 body{
+    background-color:black;
     font-size: 30px;
-    background-color: #edd92a;
-    margin: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
 }
 
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 110px;
+    background-color: #edd92a;
+    border-radius: 16px;
+    width: 400px;
+    height: 400px;
+
+  }
+
+h1 {
+    margin-bottom: 40px;
+    color:#202020;
+    font-size: 30px;
+  }
+label{
+    margin-bottom: 15px;
+    color:#202020;
+    font-size: 25px;
+}
+
+
 input{
     border-radius: 10px;
+    background-color: white;
     margin: 0 auto;
     width: 250px;
     height: 70px;
 
     
 }
+
+
 
 button{
     color: aliceblue;
@@ -27,4 +55,26 @@ button{
     height: 40px;
     background-color: #ac2d6c;
     cursor: pointer;
+}
+
+#enviar:hover {
+    background-color:#f05ba8;
+    transition:  0.5s;
+}
+
+
+ input.error{
+    border: solid 2px #992020;
+    background-color: #CCBBBB;
+    color: #662020;
+}
+
+input.correct {
+    background-color: #BBCCBB;
+    border: solid 2px #206620;
+    color: #206620;
+}
+
+.visible {
+    display: block;
 }
