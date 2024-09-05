@@ -1,0 +1,35 @@
+body{
+ margin: 0;
+}
+
+header{
+    background-color: #edd92a; 
+    font-size: 20px;
+    margin: 0;
+ }
+
+ p {
+    text-align:justify;
+ }
+
+main{
+    background-color: white;
+
+}
+
+footer{
+    background-color: white;
+
+}
+
+a{
+    text-decoration: none;
+
+}
+
+footer img{
+    margin: 0 auto;
+    display:flexbox;
+
+}
+

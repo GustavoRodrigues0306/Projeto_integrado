@@ -1,0 +1,378 @@
+@charset "UTF-8"; 
+*{list-style-type:  none;}
+body{
+    background-color: white;
+}
+
+.promogin {
+    position: fixed;
+    background-color: #434343;
+    padding: 15px 30px;
+    border-radius: 10px; /*arredondar bordas*/
+    text-align: left;
+    z-index: 1000;
+    max-width: 800%;
+    width: 90%;
+}
+
+
+.promogin a {  
+    text-decoration: none;  /*remove underline do link*/
+    color: white;
+    font-size: inherit;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.promogin strong {
+    color: #FC8A06; /*cor destaque do PROMO GIN5 */
+}
+
+/*responsividade*/
+/*reduz para telas tablets*/
+@media (max-width: 768px) {
+    .promogin {
+        max-width: 600px;
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+/*telas de celular*/
+@media (max-width: 480px) {
+    .promogin {
+        max-width: 90%;
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+/*reduz para celulares*/
+@media screen and (max-width: 480px) {
+    .promogin {
+        width: 95px; /*reduz padding telas menores*/
+        padding: 8px;
+    }    
+    
+    .promogin a {
+        font-size: 12px;
+    }
+}
+
+.top-menu {
+    position: fixed;
+    right: 22px;
+    background-color: #CB009E;
+    padding: 12.6px;
+    border-radius: 10px;
+    line-height: 0;
+    z-index: 1001
+}
+
+.top-menu a {
+    margin: 5 5px; 
+    line-height: normal;
+}
+
+.top-menu img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.vertical-line {
+    border-left: 1px solid white;
+    height: 40px;
+    margin: auto;
+}
+.container-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 1%;
+}
+.container-location {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    margin-top: 70px;
+    margin-left: 10px;
+}
+.container-location p {
+    margin-right: 5px;
+    font-weight: 21px;
+}
+.location-box {
+    flex-grow: 0.02;
+} /*não consegui mais ajustar o tamanho da caixa?????????????????*/
+.location-box ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.location-box input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #434343;
+    border-radius: 4px;
+    box-sizing: content-box;
+}
+.login-signup {
+    display: inline-block;
+    background-color: #03081F;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 70px;
+    margin-right: 40px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 0.3s ease;
+}
+.login-signup:hover {
+    background-color: #03081fd8;
+}
+
+main section {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+nav.redes {
+    display: flex;
+
+}
+.redes ul{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* POR QUE não ficou aloinhado à direita e não separa do menu principal???????*/
+nav.procure-o-seu-gin-preferido {
+    display: inline-block;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 400px;
+    
+}
+
+#search-product-input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #434343;
+    border-radius: 21px;
+    width: 200px;
+    outline: #03081F;
+    font-weight: bold;
+    cursor: text;
+}
+
+.menu-principal {
+    list-style-type: none; /*pra remover o bullet point*/
+    padding: 5px;
+    margin: 0px;
+}
+.menu-principal {
+    display: inline-block;
+    justify-content: space-between;
+    background-color: #CB009E;
+    width: 100%;
+}
+
+.menu-principal li {
+    display: inline-block;
+    margin-right: 0%;
+    padding: 1%;
+    text-align: center;
+}
+
+.menu-principal a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    text-align: justify;
+    padding: 10px;
+}
+
+.menu-principal a:hover {
+    background-color: #03081F;
+    border-radius: 27px;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*substituir por poppins*/
+    font-weight: bolder;
+}
+/* Abaixo, não sei como ajustar as distâncias*/
+.menu_litros {
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.litro-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+    padding: 0;
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+
+.litro-1 li img {
+    max-width: 190%;
+    height: 80%;
+}
+
+.meio-litro {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-gap: 5px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.meio-litro li image {
+    max-width: 10px;
+    height: 50%;
+}
+
+h2 { /*deveria ser h2 mesmo? É um produto secundário...*/
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*substituir por poppins*/
+    font-weight: bolder;
+}
+
+.menu_box {
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.menu_box ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+    padding: 0;
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+/* como não consegui ajustar utilizando o li img, deixar apenas com este e pedir ajuda na monitoria.*/
+
+h3 {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*substituir por poppins*/
+    font-weight: bolder;
+    text-align: center;
+}
+footer {
+    background-color: darkgray;
+}
+h4 {
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*substituir por poppins*/
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.subscreva {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.subscreva input {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 18px;
+    outline: none;
+    width: 300px;
+}
+
+.subscreva-button {
+    padding: 10px 20px;
+    background-color: yellow;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: ease-in;
+    position: relative;
+    left: -25%;
+    z-index: 1; /* pro botão ficar por cima*/
+
+}
+
+.subscreva-button {
+    background-color:backdrop
+} /*gostaria de fazer o botão mexer/afundar*/
+
+h5 {
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*substituir por poppins*/
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 1px;
+}
+/* lista termos legais*/
+.legal ul {
+    justify-content: left;
+    padding: 0;
+    margin: 0;
+}
+/*itens da lista*/
+.legal li {
+    list-style-type: none;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px;
+}
+
+/* links da lista:estilo*/
+.legal li a {
+    text-decoration: line;
+    color: #03081F;
+    padding: 10px 30px;
+    transition: transform 0.3s;
+}
+
+.legal li a: hover; {
+    transforme:translate 3px
+}
+
+/* ajuda-trabalhe conosco*/
+.links-importantes ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.links-importantes li {
+    list-style-type: none;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+    margin-left: 80%;
+}
+
+.links-importantes li a {
+    text-decoration: line;
+    color: #03081F;
+    padding: 10px 30px;
+
+}
+/*como eu alinho o paragrafo?*/
+.copyright {
+    align-content: center;
+}
