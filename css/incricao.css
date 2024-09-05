@@ -48,6 +48,7 @@ button{
     width: 200px;
     background-color: aquamarine;
     padding: 5px;
+    cursor: pointer;
 }
 
 button#apple{
@@ -63,13 +64,22 @@ input{
     height: 30px;
     border-radius: 5px;
     margin: auto;
-    width: 300px;
+    width: 250px;
+}
+
+input#senha1 {
+    margin-top: 10px;
+}
+
+input#email1 {
+    margin-top: 10px;
 }
 
 footer button{
     font-size: 14px;
     color: aliceblue;
     background-color: #ac2d6c;
+    cursor: pointer;
 }
 
 footer a{
@@ -78,4 +88,37 @@ footer a{
 
 a#email{
     color: aliceblue;
+}
+
+#rs:hover {
+    background-color: #f05ba8;
+    transition: 0.8;
+}
+
+#face:hover {
+    background-color: #607adb;
+    transition: 0.8;
+}
+
+#apple:hover {
+    background-color: #373839;
+    transition: 0.8;
+}
+
+input.error{
+    border: solid 2px #992020;
+    background-color: #CCBBBB;
+    color: #662020;
+}
+
+input.correct {
+    background-color: #BBCCBB;
+    border: solid 2px #206620;
+    color: #206620;
+}
+
+
+
+.visible {
+    display: block;
 }
