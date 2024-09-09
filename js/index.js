@@ -76,20 +76,38 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //section redes e carrossel
-    //elementos do carrossel e botões de navegação
-document.addEventListener('DOMContentLoaded', () => {
-const carrossel = document.querySelector('.carrossel')
-const items = document.querySelectorAll('.carrossel-item')
-const totalItems = items.length;
-const voltarButton = document.querySelector('.voltar')
-const avancarButton = document.querySelector('.avançar')
-let currentIndex = 0;
+//carrossel youtube
 
-avancarButton.addEventListener('click',()=> {
-    let itemwidth = items[0].clientWidth //pega a largura do 1 item
-    carrossel.scrollLeft += itemwidth //faz o scroll do carrossel
- })
+const imgsCarrossel = document.getElementById("carrosselimg");
+const carrosselimg = document.querySelectorAll("#carrosselimg img");
 
+let idx = 0;
+
+function carrossel(){
+  idx++;
+     if(idx > carrosselimg.length -1){
+         idx = 0;
+     }
+
+     imgsCarrossel.style.transform = `translateX(${-idx*600}px)`;
+ }
+ setInterval(carrossel, 1800);
+ console.log()
+
+// inicio carrossel luth
+// document.addEventListener('DOMContentLoaded', () => {
+// const carrossel = document.querySelector('.carrossel')
+// const items = document.querySelectorAll('.carrossel-item')
+// const totalItems = items.length;
+// const voltarButton = document.querySelector('.voltar')
+// const avancarButton = document.querySelector('.avançar')
+// let currentIndex = 0;
+
+// avancarButton.addEventListener('click',()=> {
+//     let itemwidth = items[0].clientWidth //pega a largura do 1 item
+//     carrossel.scrollLeft += itemwidth //faz o scroll do carrossel
+//  })
+// fim carrossel luth
 //passagem do carrossel
 // function updateCarrossel() {
 //     carrossel.style.transform = `tranlateX(-${currentIndex * 100}%)`;
@@ -111,95 +129,80 @@ avancarButton.addEventListener('click',()=> {
 // } 
 
 //click dos botões avançar/retroceder
-avancarButton.addEventListener('click', nextItem)
-voltarButton.addEventListener('click', prevItem)
-console.log
+// avancarButton.addEventListener('click', nextItem)
+// voltarButton.addEventListener('click', prevItem)
+// console.log
 
 //indicador para quantidade de cards no carrossel
-function createIndicators() {
-    const indicatorsContainer = document.querySelector('.indicators');
-    for (let i = 0; i < totalItems; i++) {
-        const indicator = document.createElement('div');
-        indicator.classList.add('indicator');
-        indicatorsContainer.appendChild(indicator);
-    }
-    document.querySelector('.carrossel-container').appendChild(indicatorsContainer);
-console.log
-}
+// function createIndicators() {
+//     const indicatorsContainer = document.querySelector('.indicators');
+//     for (let i = 0; i < totalItems; i++) {
+//         const indicator = document.createElement('div');
+//         indicator.classList.add('indicator');
+//         indicatorsContainer.appendChild(indicator);
+//     }
+//     document.querySelector('.carrossel-container').appendChild(indicatorsContainer);
+// console.log
+// }
 
-//indicador de navegação
-function updateIndicators() {
-    const indicators = document.querySelectorAll('.indicator');
-    indicators.forEach((indicator, index)  => {
-        if (index === currentIndex) {
-            indicator.classList.add('active')
-        } else {
-                indicator.classList.remove('active')
-            }
-        })
-console.log
-}
+// //indicador de navegação
+// function updateIndicators() {
+//     const indicators = document.querySelectorAll('.indicator');
+//     indicators.forEach((indicator, index)  => {
+//         if (index === currentIndex) {
+//             indicator.classList.add('active')
+//         } else {
+//                 indicator.classList.remove('active')
+//             }
+//         })
+// console.log
+// }
 
 
 //inicia 
-createIndicators();
-updateCarrossel();
+// createIndicators();
+// updateCarrossel();
+// })
+
+//MIX PRODUTOS: aula youtube
+ginJson.map((item, index ) => {
+    console.log(item)
+    let ginItem = document.querySelector('.models .gin-item').cloneNode(true)
+    //console.log(pizzaItem)
+    document.querySelector('.gin-area').append(ginItem)
+
+    // preencher os dados de cada pizza
+    ginItem.querySelector('.gin-item--img img').src = item.img
+    ginItem.querySelector('.gin-item--price').innerHTML = `R$ ${item.price.toFixed(2)}`
+    ginItem.querySelector('.gin-item--name').innerHTML = item.name
+    ginItem.querySelector('.pizza-item--desc').innerHTML = item.description
+
 })
 
-//MIX PRODUTOS: funcionalidades
-document.addEventListener("DOMContentLoaded"), function() {
-    const produtos = [
-        {nome:"Azedinho", caracteristicas: "Limão Siciliano, alecrim, zimbro, & chá de clitória no gelo", teoralc: "1L, Alc 40%", preco: "R$ 40,00", imgSrc: "../img/garrafa-preta-1litro-shape.png"},
-        {nome: "Docinho", caracteristicas: "Morango, hortelã, xarope de gengibre & chá de hibisco no gelo", teoralc:"1L, Alc 40%", preco: "R$ 40,00", imgSrc:"../img/garrafa-preta-1litro-shape.png" },
-        {nome: "Agridoce", caracteristicas: "Limão Tahiti, manjericão, xarope de acerola artesanal & chá mate no gelo",teoralc: "1L, Alc 40%", preco: "R$ 40,00", imgSrc: "../img/garrafa-preta-1litro-shape.png"},
-        {nome:"Azedinho", caracteristicas: "Limão Siciliano, alecrim, zimbro, & chá de clitória no gelo", teoralc:"500ml, Alc 40%", preco: "R$ 25,00", imgSrc: "../img/550ml-garrafa-preta-shape.png"},
-        {nome: "Docinho", caracteristicas: "Morango, hortelã, xarope de gengibre & chá de hibisco no gelo",teoralc: "500ml, Alc 40%", preco: "R$ 25,00", imgSrc: "../img/550ml-garrafa-preta-shape.png"},
-        {nome: "Agridoce", caracteristicas: "Limão Tahiti, manjericão, xarope de acerola artesanal & chá mate no gelo",teoralc: "500ml, Alc 40%", preco: "R$ 25,00", imgSrc:"../img/550ml-garrafa-preta-shape.png"}
-    ]
-    const container = document.querySelector('.produto-dinamico-container')
-
-    produtos.forEach((produto, index) => {
-        console.log("processamento dos produtos", index); //TESTE processamento
-        const card = document.createElement('div');
-        card.classList.add('produto-card');
-        
-        card.innerHTML =`
-            <div class="produto-info">
-                <div class="produto-nome">${produto.nome}</div>
-                <div class="produto-caracteristicas">${produto.caracteristicas}</div>
-                <div class="produto-preco">${produto.preco}</div>
-            </div>
-            <div class="produto-img-container">
-                <img src="${produto.imgSrc}" alt="$produto.nome}" class="produto-img">
-                <div class="quantidade" id="quantidade-${index}">0</div>
-            </div>
-        `;
-        container.appendChild(card);
-    })
 
 //adiciona e remove do carrinho :produtos
-    const updateQuantidade = (index, quantidade) => {
-        const quantidadeElement = document.getElementById(`quantidade-${index}`);
-        let atualquantidade = parseInt(quantidadeElement.textContent);
-        atualquantidade = increment ? atualquantidade + 1 : Math.max(0, atualquantidade -1);quantidadeElement.textContent = atualquantidade;
-    }
-//botão de adicionar: produtos
-    document.querySelectorAll('.add-button').forEach(button => {
-        button.addEventListener('click', function() {
-            const index = parseInt(this.getAttribute('data-index'));
-            console.log("Adicionando produto", index); //TESTE adição de produto
-            updateQuantidade(index, true);
-        })
-    })
-//botão remover: produtos
-    document.querySelectorAll('.remove-button').forEach(button => {
-        button.addEventListener('click', function() {
-            const index = parseInt(this.getAttribute('data-index'));
-            console.log("Removendo produto", index); //TESTE remoçao de produto
-            updateQuantidade(index, false);
-        })
-    })
-}
+//     const updateQuantidade = (index, quantidade) => {
+//         const quantidadeElement = document.getElementById(`quantidade-${index}`);
+//         let atualquantidade = parseInt(quantidadeElement.textContent);
+//         atualquantidade = increment ? atualquantidade + 1 : Math.max(0, atualquantidade -1);quantidadeElement.textContent = atualquantidade;
+//     }
+// //botão de adicionar: produtos
+//     document.querySelectorAll('.add-button').forEach(button => {
+//         button.addEventListener('click', function() {
+//             const index = parseInt(this.getAttribute('data-index'));
+//             console.log("Adicionando produto", index); //TESTE adição de produto
+//             updateQuantidade(index, true);
+//         })
+//     })
+// //botão remover: produtos
+//     document.querySelectorAll('.remove-button').forEach(button => {
+//         button.addEventListener('click', function() {
+//             const index = parseInt(this.getAttribute('data-index'));
+//             console.log("Removendo produto", index); //TESTE remoçao de produto
+//             updateQuantidade(index, false);
+//         })
+//     })
+// }
 
 //botão voltar ao início da pagina
 document.getElementById('voltar-inicio').addEventListener('click', function(e) {
