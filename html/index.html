@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/favcon.ico" type="image/x-con">
     <link rel="stylesheet" href="../css/index.css"> <!--estilização css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> <!--font poppins-->
     <script src="../js/index.js" defer></script>
     <title>Home Gin Delivery</title>           
 </head>
@@ -69,11 +72,7 @@
                 <!--imagens do carrossel-->
                 <div class="carrossel" id="carrosselimg">
                     <img src="../img/tacas-gin-tonica.png" alt="banner_tacas_gin">
-                </div>
-                <div class="carrossel" id="carrosselimg">
-                    <img src="../img/garrafas-gintrao-450x4501l-DALL·E.png">
-                </div>
-                <div class="carrossel" id="carrosselimg">      
+                    <img src="../img/garrafas-gintrao-450x4501l-DALL·E.png">    
                     <img src="../img/tres-pessoas-com-gin-carnaval-recife-450x360DALL·E 2024-09-06 13.47.36.png" alt="tres-pessoas-com-gin-carnaval-recife-DALL·E">
                 </div>
                 <!--add outras imgs carrossel aqui-->
@@ -99,97 +98,33 @@
             <ul>
         </nav>
 <!--Mix de produtos-->
-    <h1><strong>GIN NO LITRÃO & LITRÃOzinho</strong></h1>
+        <h1><strong>GIN NO LITRÃO & LITRÃOzinho</strong></h1>
     <!--modelos de produtos na lista e carrinho-->
-        <div class="models">
-            <!--gin na lista-->
-            <div class="gin_litro">
-                <a href="">
-                    <div class="gin-item-img"><img src="" /></div>
-                    <div class="gin-item-add">+</div>
-                </a>
-                <div class="gin-item-price">R$ --</div>
-                <div class="gin-item-name">--</div>
-                <div class="gin-item--desc">--</div>
-            </div>
-            <!--gin no carrinho-->
-            <div class="cart--item">
-                <img src="" />
-                <div class="cart-item-name">--</div>
-                <div class="cart-item-qtarea">
-                    <button class="cart-item-qtmenos">-</button>
-                    <div class="cart-item-qt">1</div>
-                    <button class="cart-item-qtmais">+</button>
-                </div>  
-            </div>
+        <div class="menu_litros"> <!--opções de 1 litro-->
+            <ul class="litro-1">
+                <li><img src="../img/azedinho-1l-564x313.png" alt="gin_1l_azedinho"></li>
+                <li><img src="../img/docinho-1l-564x313.png" alt="gin_1l_docinho"></li>
+                <li><img src="../img/agridoce-1l-564x313.png" alt="gin_1l_agridoce"></li>
+            </ul>
         </div>
-        <!--fim models-->
-        <!--espaço que o produto vai ocupar-->
-            <div class="gin-area"></div> 
+        <div class="menu-500ml">
+            <ul class="meio-litro"> <!--opções de 500ml-->
+                <li><img src="../img/azedinho-500ml-564x313.png" alt="gin_500ml_azedinho"></li>
+                <li><img src="../img/docinho-500ml-564x313.png" alt="gin_500ml_docinho"></li>
+                <li><img src="../img/agridoce-500ml-564x313.png" alt="gin_500ml_agridoce"></li>
+            </ul>
+        </div>
+<!--Opções de gin na box pequeno, médio e grande-->
+ <h2><strong>GIN NA BOX</strong></h2>
+    <nav class="menu_box">
+        <ul class="menu_box">
+            <li><img src="../img/ginbox-p-564x313.png" alt="box_pequeno"></li>
+            <li><img src="../img/ginbox-m-564x313.png" alt="box_medio"></li>
+            <li><img src="../img/ginbox-g-564x313.png" alt="box_grande"></li>
+        </ul>
+    </nav>    
+<!--FIM Mix de produtos-->
 
-        <!--<h2><strong>GIN NA BOX</strong></h2>-->
-            
-        <h3><strong>POR DELIVERY E NOS MELHORES EVENTOS</strong></h3>
-    </main>
-    <aside>
-        <div class="cart-area">
-            <div class="menu-closer">❌</div>
-            <h1>Seus Pedidos</h1>
-            <div class="cart"></div>
-            <div class="cart-details">
-                <div class="cart-totalitem subtotal">
-                    <span>Subtotal</span>
-                    <span>R$ --</span>
-                </div>
-                <div class="cart-totalitem desconto">
-                    <span>desconto</span>   
-                    <span>R$ --</span>
-                </div>
-                <div class="cart-totalitem total big">
-                    <span>Total</span>
-                    <span>R$ --</span>
-                </div>
-                <div class="cart-finalizar">Finalizar pedido</div>
-            </div>
-        </div>
-    </aside>
-    <!-- /aside do carrinho-->
-
-    <!-- janela modal .ginWindowArea-->
-     <div class="ginWindowArea">
-        <div class="ginWindowBody">
-            <div class="ginInfo-cancelMobileButton"Voltar></div>
-            <div class="gin1L">
-                <img src="" />
-            </div>
-            <div class="ginInfo">
-                <h1>--</h1>
-                <div class="ginInfo-desc">--</div>
-                <div class="ginInfo-sizearea">
-                    <div class="-sector">Tamanho</div>
-                    <div class="ginInfo-sizes">
-                        <div data-key="0" class="ginInfo-size">PEQUENA <span>--</span></div>
-                        <div data-key="1" class="ginInfo-size">MÉDIA <span>--</span></div>
-                        <div data-key="2" class="ginInfo-size selected">GRANDE <span>--</span></div>
-                    </div>
-                </div>
-                <div class="ginInfo-pricearea">
-                    <div class="ginInfo-sector">Preço</div>
-                    <div class="ginInfo-price">
-                        <div class="ginInfo-actualPrice">R$ --</div>
-                        <div class="ginInfo-qtarea">
-                            <button class="ginInfo-qtmenos">-</button>
-                            <div class="ginInfo-qt">1</div>
-                            <button class="ginInfo-qtmais">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="ginInfo-addButton">Adicionar ao carrinho</div>
-                <div class="ginInfo-cancelButton">Cancelar</div>
-            </div>
-        </div>
-    </div>
-    <!-- /janela modal .ginWindowArea -->
 <!--Subscrição--> 
     <footer>
         <div class="voltar-inicio">
@@ -214,15 +149,8 @@
             </ul>
         </nav>
 <!--Links Importantes-->
-        <nav>
-            <ul class="links-importantes">
-                <li>Links Importantes</li>
-                <li><a href="ajuda.html">Ajuda</a></li>
-                <li><a href="#">Trabalhe conosco</a></li>
-            </ul>
-        </nav>
+       
         <p class="Copyright">Grupo 01 - turma 27. Copyright 2024, All Rights Reserved.</p>
     </footer>
-    <script src="gins.js"></script>
 </body>
 </html>

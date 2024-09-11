@@ -165,19 +165,18 @@ function carrossel(){
 // })
 
 //MIX PRODUTOS: aula youtube
-ginJson.map((item, index ) => {
-    console.log(item)
-    let ginItem = document.querySelector('.models .gin-item').cloneNode(true)
-    //console.log(pizzaItem)
-    document.querySelector('.gin-area').append(ginItem)
+// ginJson.map((item, index ) => {
+//     console.log(item)
+//     let ginItem = document.querySelector('.models .gin-item').cloneNode(true)
+//    //console.log(ginItem)
+//     document.querySelector('.gin-area').append(ginItem)
 
-    // preencher os dados de cada pizza
-    ginItem.querySelector('.gin-item--img img').src = item.img
-    ginItem.querySelector('.gin-item--price').innerHTML = `R$ ${item.price.toFixed(2)}`
-    ginItem.querySelector('.gin-item--name').innerHTML = item.name
-    ginItem.querySelector('.pizza-item--desc').innerHTML = item.description
-
-})
+//   // preencher os dados de cada gin
+//     ginItem.querySelector('.gin-item--img img').src = item.img
+//     ginItem.querySelector('.gin-item--price').innerHTML = `R$ ${item.price.toFixed(2)}`
+//     ginItem.querySelector('.gin-item--name').innerHTML = item.name
+// /   ginItem.querySelector('.gin-item--desc').innerHTML = item.description
+//  })
 
 
 //adiciona e remove do carrinho :produtos
